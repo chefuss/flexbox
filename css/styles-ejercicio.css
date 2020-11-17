@@ -53,38 +53,53 @@ img {
 
 /* 1- Crear media query para que los estilos flexbox solo se apliquen
 en la version desktop */
+@media (min-width: 960px) {
+  .flex-container {
+    display: flex;
+  }
 
+  header .flex-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+  #section-1 .flex-container {
+    flex-direction: column;
+    padding-right: 100px;
+  }
+  #section-2 .flex-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-/* ESTILOS Flexbox */
-/* usemos nuestra clase flex-container para dar estilos generales flex */
+  .flex-hijos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-/*
-Acomodar el header
-1- los elementos tienen que estar justificados
-2- los elementos tienen que estar centrados verticalmente
-*/
+  #section-3 .flex-container {
+    justify-content: space-between;
+  }
 
+  #section-3 .text-container {
+    margin-left: 30px;
+  }
 
-/*
-Acomodar la sección 1.
-1- los elementos tienen que estar uno abajo del otro.
-2- no miden el 100% del contenedor.
-3- estan alineados a la izquierda.
-*/
+  footer .flex-container {
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  footer .legales,
+  footer .redes {
+    width: calc((100% / 2) - 15px);
+  }
 
-/*
-Acomodar la sección 2
-1- tiene que haber dos elementos por fila
-2- los elementos que contengan tienen que estar centrados horizontal y verticalmente
-*/
+  .redes {
+    text-align: right;
+  }
 
-
-/*
-Acomodar la sección 3
-1- deben ser 2 columnas
-2- debe haber un espaco entre ellas.
-*/
+}
 
 /*
 Sección 3
